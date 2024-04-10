@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository
 import java.util.*
 
 @Repository
-interface ProdutoRepository : JpaRepository<Produto, UUID>{}
+interface AvaliacaoRepository: JpaRepository<Produto, UUID> {
+}

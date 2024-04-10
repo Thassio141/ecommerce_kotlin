@@ -1,5 +1,10 @@
 package io.redspark.ecommerce.Models.Entidades
 
+import jakarta.persistence.*
+import java.sql.Blob
+import java.util.*
+import kotlin.collections.HashSet
+
 @Entity
 @Table(name = "produto")
 class Produto(
@@ -18,5 +23,9 @@ class Produto(
 
         val idCategoria : Categoria,
 
-        val idPromocao : Promocao
+        val idPromocao : Promocao,
+
+        val idAvalicao : HashSet<Avaliacao>,
+
+        val imagem : ByteArray
 )

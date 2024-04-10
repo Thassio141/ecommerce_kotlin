@@ -1,5 +1,8 @@
 package io.redspark.ecommerce.Models.Entidades
 
+import jakarta.persistence.*
+import java.util.*
+
 @Entity
 @Table(name = "categoria")
 class Categoria(
