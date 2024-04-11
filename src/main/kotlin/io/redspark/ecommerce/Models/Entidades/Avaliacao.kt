@@ -12,8 +12,10 @@ class Avaliacao (
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id : UUID?,
 
+    @ManyToOne(targetEntity = Usuario::class)
     val idUsuario : Usuario,
 
+    @ManyToOne(targetEntity = Produto::class)
     val idProduto: Produto,
 
     val numeroAvaliacao: Int,

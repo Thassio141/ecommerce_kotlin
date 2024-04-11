@@ -17,5 +17,8 @@ class Promocao(
 
         val quantidade : Int,
 
-        val descricao : String
+        val descricao : String,
+
+        @ManyToOne(targetEntity = Produto::class)
+        val idPromocao: Produto
 )

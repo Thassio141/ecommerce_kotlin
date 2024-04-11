@@ -21,10 +21,13 @@ class Produto(
 
         val descricao : String,
 
+        @ManyToOne(targetEntity = Categoria::class)
         val idCategoria : Categoria,
 
+        @ManyToOne(targetEntity = Promocao::class)
         val idPromocao : Promocao,
 
+        @OneToMany(targetEntity = Avaliacao::class)
         val idAvalicao : HashSet<Avaliacao>,
 
         val imagem : ByteArray
