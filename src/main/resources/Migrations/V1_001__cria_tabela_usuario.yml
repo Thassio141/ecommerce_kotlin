@@ -1,0 +1,47 @@
+databaseChangeLog:
+  - changeSet:
+      id: V1_001
+      author: Noah Barros
+      changes:
+        - createTable:
+            tableName: usuario
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  autoIncrement: true
+                  constraints:
+                      nullable: false
+                      primaryKey: true
+              - column:
+                  name: nome
+                  type: varchar(255)
+                  constraints:
+                      nullable: false
+              - column:
+                  name: cpf
+                  type: varchar(255)
+                  constraints:
+                      nullable: false
+                      unique: true
+              - column:
+                  name: email
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: senha
+                  type: varchar(255)
+                  constraints:
+                      nullable: false
+              - column:
+                  name: endereco
+                  type: uuid
+                  constraints:
+                    nullable: false
+              - column:
+                  name: telefone
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
